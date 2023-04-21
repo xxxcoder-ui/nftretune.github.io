@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState , useCallback } from "react";
 import styles from "../styles/NftGallery.module.css";
-import { useAccount } from "wagmi";
+import { Contract } from "alchemy-sdk";
+import { useAccount, useSigner } from "wagmi";
 
 export default function NFTGallery({}) {
   const [nfts, setNfts] = useState();
